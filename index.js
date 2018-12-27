@@ -2,7 +2,7 @@
 * @Author: Vyn
 * @Date:   2018-12-23 11:19:11
 * @Last Modified by:   Vyn
-* @Last Modified time: 2018-12-27 16:34:13
+* @Last Modified time: 2018-12-27 17:13:50
 */
 
 const readlineSync = require('readline-sync');
@@ -24,6 +24,9 @@ for (let i = 2; i < process.argv.length; ++i)
 	if (process.argv[i] == "-train")
 		training = true;
 }
+
+if (training)
+	utils.EnableDebug(false);
 
 let game = new Game;
 let nbPlayer1Win = 0;
